@@ -13,12 +13,14 @@ const getUrlParams = () => {
 localStorage.setItem("userId", getUrlParams());
 
 const onResult = (result) => {
-  const resultEl = document.getElementById("result");
+  // const resultEl = document.getElementById("result");
   const resultUrl = new URL(result);
   resultUrl.searchParams.set("id", localStorage.getItem("userId"));
 
-  resultEl.innerHTML = result;
-  resultEl.href = resultUrl;
+  // resultEl.innerHTML = result;
+  // resultEl.href = resultUrl;
+
+  window.open(resultUrl)
 
   qrScanner.stop();
 };
