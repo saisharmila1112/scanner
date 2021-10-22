@@ -20,7 +20,8 @@ const onResult = (result) => {
   // resultEl.innerHTML = result;
   // resultEl.href = resultUrl;
 
-  window.open(resultUrl)
+ // window.open(resultUrl) - not working properly in ios
+  window.location.assign(resultUrl)
 
   qrScanner.stop();
 };
