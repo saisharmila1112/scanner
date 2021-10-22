@@ -21,7 +21,8 @@ const onResult = (result) => {
   // resultEl.href = resultUrl;
 
  // window.open(resultUrl) - not working properly in ios
-  window.location.assign(resultUrl)
+ // window.location.assign(resultUrl) 
+  window.location = resultUrl
 
   qrScanner.stop();
 };
